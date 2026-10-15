@@ -21,6 +21,7 @@ As funcionalidades são simuladas por mensagens no console. O projeto não repro
 - Sobrescrita de métodos com `@Override`
 - Organização de classes em arquivos separados
 - Criação de objetos e chamadas de métodos
+- Testes automatizados para verificar as mensagens exibidas pelos métodos
 
 ## Estrutura do projeto
 
@@ -31,6 +32,8 @@ Desafio-iPhone--POO/
 ├── NavegadorInternet.java
 ├── ReprodutorMusical.java
 ├── iPhone.java
+├── tests/
+│   └── TesteIPhone.java
 └── README.md
 ```
 
@@ -41,23 +44,49 @@ Desafio-iPhone--POO/
 
 Verifique a instalação do Java:
 
-```bash
+```powershell
 java -version
 javac -version
 ```
 
 ## Como compilar e executar
 
-Abra o terminal na pasta que contém os arquivos `.java` e execute:
+Abra o terminal na pasta principal do projeto e execute:
 
-```bash
+```powershell
 javac *.java
 java Main
 ```
 
-## Resultado esperado
+## Como executar os testes
 
-O programa apresenta mensagens no console para demonstrar a execução dos métodos de música, telefone e navegador.
+Compile a classe principal e o arquivo de teste:
+
+```powershell
+javac *.java .\tests\TesteIPhone.java
+```
+
+Execute os testes:
+
+```powershell
+java -cp ".;tests" TesteIPhone
+```
+
+## Testes realizados
+
+O arquivo `TesteIPhone.java` verifica as mensagens exibidas pelos nove métodos do projeto:
+
+- Tocar música
+- Pausar música
+- Selecionar música
+- Ligar
+- Atender chamada
+- Iniciar correio de voz
+- Exibir página
+- Adicionar nova aba
+- Atualizar página
+
+**Última execução realizada:** 9 testes aprovados.
 
 ## Autor
 
